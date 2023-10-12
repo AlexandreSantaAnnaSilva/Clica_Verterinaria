@@ -8,17 +8,27 @@
  * @author a2484
  */
 public class Animal {
+    int id;
     private String nome;
     private int idade;
     private int sexo; //0 = macho , 1 = femea
     
     
-    public Animal(String nome, int idade , int sexo){
+    public Animal(int id ,String nome, int idade , int sexo){
+        this.id = id;
         this.nome = nome;
         this.idade = idade;
         this.sexo = sexo;
     }
 
+    
+    public int getId(){
+        return id;
+    }
+    
+    public void setId(int id){
+        this.id = id;
+    }
     
     public String getNome(){
         return nome;
@@ -48,6 +58,10 @@ public class Animal {
         this.sexo = sexo;
     }
 
-
+    @Override
+    public String toString(){
+        return "Animal(" + "nome=" + nome + ')';
+    }
+    
 
 }
