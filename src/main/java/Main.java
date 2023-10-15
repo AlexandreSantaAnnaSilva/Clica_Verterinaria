@@ -1,4 +1,6 @@
 
+import Model.Cliente;
+import Model.Animal;
 import java.util.List;
 
 /*
