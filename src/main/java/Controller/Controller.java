@@ -14,11 +14,11 @@ import Model.Cliente;
 import Model.ClienteDAO;
 import Model.ConsultaDAO;
 import Model.Tratamento;
-import Model.TratamentoDAO;
 import Model.Veterinario;
 import Model.VeterinarioDAO;
 import Model.Consulta;
 import Model.ExameDAO;
+import Model.TratamentoDAO;
 
 /**
  *
@@ -123,13 +123,13 @@ public class Controller {
 
     public static void setSelectedCliente(Cliente cliente) {
         selectedClient = cliente;
-        selectedClientTP.setText(cliente.getNom_cli());
+        selectedClientTP.setText(cliente.getNome_cli());
     }
 
     public static void setSelectedAnimal(Animal animal) {
         selectedAnimal = animal;
-        selectedAnimalTP.setText(animal.getNome_animal());
-        selectedIdadeAnimalTP.setText(String.valueOf(animal.getIdade_animal()));
+        selectedAnimalTP.setText(animal.getNome_ani());
+        selectedIdadeAnimalTP.setText(String.valueOf(animal.getIdade_ani()));
 
         setSelectedTratamentoByAnimalId(0);
     }
@@ -150,7 +150,7 @@ public class Controller {
             tratamentos.setFinalizado(finalizado);
             System.out.println(finalizado);
             if(finalizado == 1){
-                tratamentos.setDat_fim(date);
+                tratamentos.setDt_fim(date);
             }
             TratamentoDAO.getInstance().update(tratamentos);
         }
@@ -160,7 +160,7 @@ public class Controller {
 
     public static void setSelectedVeterinario(Veterinario veterinario) {
         selectedVeterinario = veterinario;
-        selectedVeterinarioTP.setText(veterinario.getNom_vet());
+        selectedVeterinarioTP.setText(veterinario.getNome_vet());
     }
     
     public static void setSelectedConsulta(Consulta consulta){
@@ -172,7 +172,7 @@ public class Controller {
         selectedSintomasConsTP.setText(consulta.getSintomas()) ;
         
         if(animal != null){
-            selectedAnimalConsTP.setText(animal.getNome_animal());
+            selectedAnimalConsTP.setText(animal.getNome_ani());
         }
     }
 
