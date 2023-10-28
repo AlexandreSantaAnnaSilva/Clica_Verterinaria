@@ -12,6 +12,7 @@ import java.util.List;
  *
  * @author a2484
  */
+/*
 public class Main {
     public static void main(String[] args){
        Cliente c1 = new Cliente("Alexandre","Rua longa" ,"40404040" ,"00250555","ale@gmail");
@@ -33,3 +34,4 @@ public class Main {
         System.out.println(c1);
     }
 }
+*/

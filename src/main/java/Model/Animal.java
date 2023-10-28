@@ -32,8 +32,16 @@ public class Animal {
         return id_ani;
     }
     
-    public void setId_ani(int id_ani){
-        this.id_ani = id_ani;
+    public int getId_cli() {
+        return id_cli;
+    }
+    
+    public int getEsp_id() {
+        return id_esp;
+    }
+    
+    public void setEsp_id(int id_esp) {
+        this.id_esp = id_esp;
     }
     
     public String getNome_ani(){
@@ -58,7 +66,7 @@ public class Animal {
         return sexo_ani;
     }
     
-    
+  
     public void setSexo_ani(int sexo_ani){
     
         this.sexo_ani = sexo_ani;

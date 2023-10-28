@@ -11,7 +11,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 /**
  *
- * @author a2484
+ * @author a248488
  */
 
 public abstract class DAO {
@@ -19,7 +19,7 @@ public abstract class DAO {
     public static final String DBURL = "jdbc:h2:./vet2021.db"; //CRIANDO O BANCO
     private static Connection con;
     protected static SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
-}
+
 
 
 // Connect to SQLite
@@ -109,7 +109,6 @@ public abstract class DAO {
             stmt = DAO.getConnection().prepareStatement("CREATE TABLE IF NOT EXISTS Veterinario( \n"//PRONTO
                     + "id_vet INTEGER PRIMARY KEY, \n"
                     + "nome_vet VARCHAR, \n "
-                    +"email VARCHAR, \n"
                     + "cidade_vet VARCHAR, \n "
                     + "estado_vet VARCHAR, \n "
                     + "rua_vet VARCHAR, \n "
@@ -120,8 +119,8 @@ public abstract class DAO {
             stmt = DAO.getConnection().prepareStatement("CREATE TABLE IF NOT EXISTS Tratamento( \n" //PRONTO
                     + "id_trat INTEGER PRIMARY KEY, \n"
                     + "id_animal INTEGER, \n"
-                    + "data_ini VARCHAR, \n"
-                    + "data_fim VARCHAR, \n"
+                    + "dt_inis VARCHAR, \n"
+                    + "dt_fim VARCHAR, \n"
                     + "finalizado INTEGER); \n");
             executeUpdate(stmt);
 

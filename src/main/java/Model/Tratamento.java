@@ -14,12 +14,13 @@ import java.util.Calendar;
  */
 public class Tratamento {
     private int id_trat;
-    private Calendar dt_inic;
-    private Calendar dt_fim;
+    private String dt_inic;
+    private String dt_fim;
     private int id_animal;
-    private boolean finalizado;
+    private int finalizado;
     
-    public Tratamento(Calendar dt_inic, Calendar dt_fim, int id_animal , boolean finalizado){
+    public Tratamento(int id_trat ,String dt_inic, String dt_fim, int id_animal , int finalizado){
+            this.id_trat = id_trat;
             this.dt_inic = dt_inic;
             this.dt_fim = dt_fim;
             this.id_animal = id_animal;
@@ -27,20 +28,20 @@ public class Tratamento {
     }   
    
 
-    public Calendar getDt_inic(){
+    public String getDt_inic(){
         return dt_inic;
     }
     
-    public void setDt_inic (Calendar dt_inic){
+    public void setDt_inic (String dt_inic){
         this.dt_inic = dt_inic;
     }
     
     
-    public Calendar getDt_fim(){
+    public String getDt_fim(){
         return dt_fim;
     }   
     
-    public void setDtFim( Calendar dt_fim){
+    public void setDt_fim( String dt_fim){
         this.dt_fim = dt_fim;
     }
     
@@ -52,11 +53,15 @@ public class Tratamento {
         this.id_animal = id_animal;
     }
     
-    public boolean getFinalizou(){
+    public int getFinalizado(){
         return finalizado;
     }
 
-   public void setFinalizou( boolean finalizado){
+   public void setFinalizado( int finalizado){
        this.finalizado = finalizado;
    }
+   
+       public int getId_trat() {
+        return id_trat;
+    }
 }

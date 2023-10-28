@@ -13,7 +13,6 @@ public class Veterinario {
     
     private int id_vet;
     private String nome_vet;
-    private String email;
     private String tel_vet;
     private String cidade_vet;
     private String estado_vet;
@@ -22,10 +21,9 @@ public class Veterinario {
     
     
     
-    public Veterinario(int id_vet, String nome_vet, String email, String tel_vet , String cidade_vet, String estado_vet, String rua_vet, String bairro_vet){
+    public Veterinario(int id_vet, String nome_vet,  String tel_vet , String cidade_vet, String estado_vet, String rua_vet, String bairro_vet){
         
         this.id_vet = id_vet;
-        this.email = email;
         this.nome_vet = nome_vet;
         this.tel_vet = tel_vet;
         this.cidade_vet = cidade_vet;
@@ -82,15 +80,6 @@ public class Veterinario {
         this.nome_vet = nome_vet;
     }
     
-    
-    public String getEmail(){
-        return email;
-    }
-    
-
-    public void setEmail(String email){
-        this.email = email;
-    }
     
     public String getTel_vet(){
         return tel_vet;
