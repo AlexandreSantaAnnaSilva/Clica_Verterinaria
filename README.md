@@ -1,4 +1,4 @@
-# **Sistema de Clínica Veterinária**
+# **Sistema de Clínica Veterinária🐶**
 
 ## Introdução
 Este sistema foi desenvolvido para gerenciar as operações diárias de uma clínica veterinária, facilitando o agendamento de consultas, o registro de tratamentos e a manutenção de registros atualizados de clientes e pacientes.
